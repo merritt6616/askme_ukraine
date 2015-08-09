@@ -54,10 +54,10 @@ class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
     public function rules()
     {
         return [
-            [['user_firstname', 'user_lastname', 'user_username'], 'string', 'max' => 45, 'message'=>'Your entry is too long. Please try again.' ],
+            [[ 'user_username'], 'string', 'max' => 45, 'message'=>'Your entry is too long. Please try again.' ],
             ['user_isMaster', 'integer'],
             ['user_password', 'string', 'max' => 80, 'message'=>'Your entry is too long. Please try again.'],
-            [['user_password', 'user_username', 'user_firstname', 'user_lastname'], 'required', 'message'=>'This field may not be empty.', 'on'=>'create'],
+            [['user_password', 'user_username'], 'required', 'message'=>'This field may not be empty.', 'on'=>'create'],
             ['user_username', 'unique', 'message'=>'This username is already taken.', 'on'=>'create'],
 
             ['user_password', 'validatePassword', 'on'=>'login'],

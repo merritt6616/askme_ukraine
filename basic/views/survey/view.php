@@ -19,6 +19,8 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="inlineblock--middleAlign spacer--smaller--downward nav--inline">
         <?php
                 echo Html::a($model->survey_activated == 1 ? 'Deactivate' : 'Activate', ['toggleactivate', 'id' => $model->id], ['class' => 'btn nav--inline__link']);
+
+            if (!$model->survey_activated) {
                 echo Html::a('', ['update', 'id' => $model->id], ['class' => 'btn glyphicon glyphicon-pencil nav--inline__link ']);
                 echo Html::a('', ['delete', 'id' => $model->id], [
                             'class' => 'btn glyphicon glyphicon-remove nav--inline__link ',
@@ -27,12 +29,16 @@ $this->params['breadcrumbs'][] = $this->title;
                                 'method' => 'post',
                             ],
                         ]);
+            }
+            if ($model->survey_activated)
+                echo '<span class="text--larger glyphicon glyphicon-warning-sign iconbefore--smallspace--right">Activated surveys may not be edited.</span>';
         ?>
         </div>
     </div>
 
+    <?php
 
-
+    ?>
 
 
     <h2>Questions</h2>
@@ -45,6 +51,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 echo '<div class="col-md-5">';
                     echo '<div class="row spacer--small--downward">';
                         echo '<div class="col-xs-8">'.$frage->question_name.'</div>';
+
 
                         if (!$model->survey_activated)
                             echo '<div class="col-xs-4">'.Html::a('', ['question/delete', 'survey_id'=>$model->id, 'question_id'=>$frage->id], ['class'=>'btn btn--circle glyphicon glyphicon-remove','data'=>['method'=>'post']]).'</div>';
