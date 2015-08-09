@@ -1,0 +1,29 @@
+@import "../variables";
+
+
+
+//################################################################################
+
+.widget--breadcrumbs {
+  list-style-type: none;
+  margin: 0.5em 0;
+  display: block;
+}
+
+
+.widget--breadcrumbs__listitem a{
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+.widget--breadcrumbs__link--active {
+  color: $brand-primary;
+  text-decoration: none;
+
+}
+@media screen and (max-width: $screen-xs-max) {
+  .widget--breadcrumbs {
+    display: none;
+  }
+}
+

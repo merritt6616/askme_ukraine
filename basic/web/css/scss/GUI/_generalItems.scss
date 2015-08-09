@@ -1,0 +1,143 @@
+@import "../variables";
+
+.flexbox {
+  display: flex;
+}
+.flexbox--row {
+  flex-direction: row;
+}
+
+.block--relative {
+  display: block;
+  position: relative;
+}
+.block--tablerow {
+  display: table-row;
+}
+.block--tablecell {
+  display: table-cell;
+}
+
+
+.float--left {
+  float: left;
+}
+.float--right {
+  float: right;
+}
+
+.reset--margin {
+  margin: 0;
+}
+.reset--margin--top {
+  margin-top: 0;
+}
+.reset--padding {
+  padding: 0;
+}
+
+.island--regular {
+  padding: 1em;
+}
+.island--small {
+  padding: 0.5em;
+}
+.island--small--moreVerticalSpace {
+  padding: 0.75em 0.5em;
+}
+.island--small--moreHorizontalSpace {
+  padding: 0.5em 0.75em;
+}
+.island--onlyHorizontalSpace {
+  padding: 0 1em;
+}
+.island--onlyMuchHorizontalSpace {
+  padding: 0 2em;
+}
+.island--moreVerticalSpace {
+  padding: 1.5em 1em;
+}
+
+.island--onlyVerticalSpace {
+  padding: 1em 0;
+}
+.island--onlySmallVerticalSpace {
+  padding: 0.5em 0;
+}
+
+.island--onlyMuchVerticalSpace {
+  padding: 2em 0;
+}
+
+@media (min-width: $screen-lg-min) {
+  .island--regular {
+    padding: 1.5em;
+  }
+  .island--moreVerticalSpace {
+    padding: 2em 1.5em;
+  }
+}
+
+
+
+.inlineblock {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+.inlineblock--middleAlign,  .middleAlign--before:before,  .middleAlign--after:after  {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  vertical-align: middle;
+}
+.inlineblock--bottomAlign, .bottomAlign--before:before {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  vertical-align: bottom;
+}
+.inlineblock--baselineAlign, .baselineAlign--before, .baselineAlign--before:before, .baselineAlign--after, .baselineAlign--after:after {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  vertical-align: baseline;
+}
+
+.textdecoration--none--force {
+  text-decoration: none!important;
+}
+
+.spacer--small--vertical {
+  margin: 1em 0;
+}
+.spacer--large--vertical {
+  margin: 2em 0;
+}
+.spacer--small--downward {
+  margin-bottom: 1em;
+}
+.spacer--smaller--downward {
+  margin-bottom: 0.5em;
+}
+.spacer--large--downward {
+  margin-bottom: 2em;
+}
+.spacer--small--upward {
+  margin-top: 1em;
+}
+.spacer--small--upward--px {
+  margin-top: 10px;
+}
+.spacer--large--upward {
+  margin-top: 2em;
+}
+
+.spacer--small--right {
+  margin-right: 1em;
+}
+
+.markedText {
+  color: $brand-secondary;
+
+}

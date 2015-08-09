@@ -1,0 +1,48 @@
+@mixin inlineblock() {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+
+// Add percentage of white to a color
+@function tint($color, $percent){
+  @return mix(white, $color, $percent);
+}
+
+// Add percentage of black to a color
+@function shade($color, $percent){
+  @return mix(black, $color, $percent);
+}
+//taken from Bourbon http://bourbon.io/
+
+@mixin pencilunderline($verticalspace, $size) {
+  @if $size == "short" {
+    border-width: 0 0 8px;
+    border-style: solid;
+    border-image: url("../img/pencilline--short.png") 0 0 8 stretch;
+  }
+  @else if $size == "medium" {
+    border-width: 0 0 4px;
+    border-style: solid;
+    border-image: url("../img/pencilline--medium.png") 0 0 8 stretch;
+  }
+  @else if $size =="long"{
+    border-width: 0 0 4px;
+    border-style: solid;
+    border-image: url("../img/pencilline--long.png") 0 0 8 stretch;
+  }
+  @else if $size =="fullstretch"{
+    background: url("../img/pencilline--fullstretch.png") 0 $verticalspace no-repeat;
+    background-size: 100% 20px;
+  }
+
+}
+
+@mixin pencilunderline--colorless($verticalspace, $size) {
+  @if $size == "short" {
+    background: url("../img/pencilline--short--colorless.png") 0 $verticalspace no-repeat;
+    background-size: 100% 8px;
+  }
+
+
+}

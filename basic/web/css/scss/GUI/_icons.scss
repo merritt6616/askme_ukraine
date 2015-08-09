@@ -1,0 +1,219 @@
+@font-face {
+  font-family: 'icomoon';
+  src:url('../fonts/icomoon.eot') format('embedded-opentype'),
+  url('../fonts/icomoon.woff') format('woff'),
+  url('../fonts/icomoon.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+.icon,
+.iconbefore:before,
+.iconafter:after
+{
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.iconbefore--lead:before
+{
+  margin-right: 5px;
+  @include inlineblock();
+  font-size: 120%;
+}
+.iconbefore--lead--stronger:before
+{
+  margin-right: 10px;
+  @include inlineblock();
+  font-size: 115%;
+}
+.iconbefore--lead--strongest:before
+{
+  margin-right: 5px;
+  @include inlineblock();
+  font-size: 2.5em;
+}
+
+.iconbefore--list {
+  &:before {
+    margin-right: -1em;
+    @include inlineblock ();
+    vertical-align: top;
+    margin-top: 3px;
+  }
+}
+
+
+.iconbefore--smallspace--bottom:before {
+  margin-bottom: 3px;
+}
+
+
+.iconbefore--colored--primary:before {
+  color: $brand-primary;
+}
+.iconbefore--colored--gray:before {
+  color: $brand-secondary;
+}
+
+.icondivider:after {
+  margin: 0 0.75em;
+  @include inlineblock();
+  vertical-align: middle;
+}
+.icondivider--before:before {
+  margin: 0 0.75em;
+  @include inlineblock();
+  vertical-align: middle;
+}
+
+.icondivider--smallspace:after {
+  margin: 0 0.25em;
+  @include inlineblock();
+  vertical-align: middle;
+}
+.icondivider--pipe:after {
+  content: "|";
+  font-size: 115%;
+  vertical-align: baseline;
+}
+.icondivider--arrow:after {
+  content: ">";
+  color: #fff;
+}
+
+
+.icon-afterarrow:after {
+  content: "\e606";
+}
+.icon-afterarrow--left:after {
+  content: "\e605";
+}
+
+.iconbefore--smallspace--right:before{
+  margin-right: 5px;
+}
+.iconafter--smallspace--left:after {
+  margin-left: 5px;
+}
+.iconafter--largespace--left:after {
+  margin-left: 10px;
+}
+
+//if the underline hover style should not apply to the icon, inline-block required
+.icon--nounderline:before {
+  text-decoration: none !important;
+  display: inline-block;
+}
+
+.icon-house:before {
+  content: '\e600';
+}
+.icon-cal:before {
+  content: '\e603';
+}
+.icon-people:before {
+  content: "\e607";
+}
+.icon-arrow--left:before {
+  content: "\e605";
+}
+.icon-arrow--right:before {
+  content: "\e606";
+}
+.icon-arrow--right--v2:before {
+  content: "\e60e";
+}
+.icon-arrow--left--v2:before {
+  content: "\e60f";
+}
+.icon-arrow--up--before:before {
+  content: "\e616";
+}
+.icon-arrow--up--after:after {
+  content: "\e616";
+}
+.icon-clipboard:before {
+  content: "\e601";
+}
+.icon-mail:before {
+  content: "\e602";
+}
+.icon-list:before {
+  content: "\e60b";
+}
+.iconbefore--lead--stronger.icon-list:before {
+  font-size: 100%;
+}
+.icon-phone:before {
+  content: "\e604";
+}
+.icon-facebook:before {
+  content: "\e449";
+}
+.icon-twitter:before {
+  content: "\e49d";
+}
+.icon-html5:before {
+  content: "\e2f1";
+}
+.icon-fax:before {
+  content: "\e119";
+}
+.icon-secretary:before {
+  content: "\e18e";
+}
+.icon-file:before {
+  content: "\e60a";
+}
+.icon-pdf:before {
+  content: "\e608";
+}
+.icon-doc:before,.icon-docx:before {
+  content: "\e609";
+}
+.icon-link:before {
+  content: "\e60c";
+}
+.icon-plus:before {
+  content: "\e60d";
+}
+.icon-addalarm:before {
+  content: "\e611";
+}
+.icon-rss:before {
+  content: "\ea94";
+}
+
+.icon-rss--after:after {
+  content: "\ea94";
+}
+.icon-menu--before:before {
+  content: "\e612";
+}
+.icon-printer:before {
+  content: "\e617";
+  font-size: 125%;
+}
+.icon-accessibility:before {
+  content: "\e618";
+  font-size: 135%;
+}
+.icon-excel:before, .icon-xls:before, .icon-xlsx:before  {
+  content: "\e619";
+}
+.icon-image:before, .icon-jpg:before, .icon-jpeg:before, .icon-png:before {
+  content: "\e927";
+}

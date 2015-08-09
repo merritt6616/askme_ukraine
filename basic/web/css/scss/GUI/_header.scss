@@ -1,0 +1,52 @@
+@import "../variables";
+
+header {
+  text-align: left;
+  margin: 0;
+
+  position: relative;
+
+
+}
+
+.header__content {
+  height: 213px;
+  width: 100%;
+  z-index: 6;
+  position: relative;
+}
+
+
+
+@media screen and (min-width: $screen-sm-min) {
+
+.header__underline {
+  @include pencilunderline(0, "fullstretch");
+  height: 20px;
+  width: 100%;
+  background-size: 100% 100%;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  z-index: 9;
+
+}
+
+}
+
+@media (max-width: $screen-sm-max) and (min-width: $screen-sm-min) {
+  .header__content {
+    padding-left: 20px;
+  }
+}
+
+@media screen and (max-width: $screen-xs-max) {
+  .header__content {
+    z-index: 20;
+    height: auto;
+  }
+
+  header {
+
+  }
+}

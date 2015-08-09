@@ -1,0 +1,63 @@
+/* jQuery ACCORDION */
+
+.ui-accordion {
+}
+
+.ui-accordion .ui-accordion-header {
+  display: block;
+  cursor: pointer;
+  outline:none;                   /* damit die gepunkteten Linien z.B. beim FF verschwinden */
+  position: relative;
+  padding: .3em .3em .3em .5em;
+  min-height: 0; /* support: IE7 */
+  margin: 2px 0 0 0;
+  font-weight: normal;
+  font-size: 150%;
+  color: $link-color;
+  background: $brand-primary;
+
+  &:hover {
+    background: tint($brand-primary, 20%);
+  }
+
+
+
+}
+.ui-accordion .ui-accordion-icons {
+  padding-left: 2.2em !important;
+}
+.ui-accordion .ui-accordion-noicons {
+  padding-left: .7em;
+}
+.ui-accordion .ui-accordion-header .ui-accordion-header-icon {
+  position: absolute;
+  left: .5em;
+  top: 50%;
+  margin-top: -8px;
+}
+.ui-accordion .ui-accordion-content {
+  padding: 1em 2.2em;
+  overflow: auto;
+  border: 1px solid $brand-primary;
+
+}
+
+.ui-state-default .ui-icon {
+  background-image: url(../img/ui-icons.png);
+  width:16px;
+  height:16px;
+}
+.ui-icon-triangle-1-e { background-position:0 -192px; }
+.ui-icon-triangle-1-s { background-position:-16px -192px; }
+
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr {
+}
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl {
+}
+.ui-accordion-header-active {
+  border-bottom-left-radius:0;
+  border-bottom-right-radius:0;
+}
+.ui-accordion-content-active {
+  border: 1px solid #aaa;
+}
