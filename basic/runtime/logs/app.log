@@ -21609,3 +21609,126 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1439213797.5
     'REQUEST_TIME' => 1439213797
 ]
+2015-08-10 17:09:33 [127.0.0.1][-][8crmce17n8n5mprmlgqim0e926][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 148 of 15896 bytes' 
+
+in /var/www/html/surveyApp--english/basic/vendor/yiisoft/yii2-debug/LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', '/var/www/html/s...', 86, Array)
+#1 /var/www/html/surveyApp--english/basic/vendor/yiisoft/yii2-debug/LogTarget.php(86): unserialize('a:54:{s:13:"55a...')
+#2 /var/www/html/surveyApp--english/basic/vendor/yiisoft/yii2-debug/LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('/var/www/html/s...', Array)
+#3 /var/www/html/surveyApp--english/basic/vendor/yiisoft/yii2-debug/LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 /var/www/html/surveyApp--english/basic/vendor/yiisoft/yii2/log/Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 /var/www/html/surveyApp--english/basic/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2015-08-10 17:09:33 [127.0.0.1][-][8crmce17n8n5mprmlgqim0e926][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.407138168.1423580788'
+    '_csrf' => 'af0cd2c554bd5bd517e71005732348fdb7074267c12303d8da08e87d94dbc998a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UlCgiTpkCeGlZgerFrqwlouimICg1AxL\";}'
+    'PHPSESSID' => '8crmce17n8n5mprmlgqim0e926'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/43.0.2357.130 Chrome/43.0.2357.130 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/surveyApp--english/basic/web/index.php?r=theme%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_ga=GA1.1.407138168.1423580788; _csrf=af0cd2c554bd5bd517e71005732348fdb7074267c12303d8da08e87d94dbc998a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UlCgiTpkCeGlZgerFrqwlouimICg1AxL%22%3B%7D; PHPSESSID=8crmce17n8n5mprmlgqim0e926'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/surveyApp--english/basic/web/index.php'
+    'REMOTE_PORT' => '51549'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/surveyApp--english/basic/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/surveyApp--english/basic/web/index.php'
+    'PHP_SELF' => '/surveyApp--english/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1439219373.767
+    'REQUEST_TIME' => 1439219373
+]
+2015-08-10 17:09:34 [127.0.0.1][-][-][error][yii\base\ErrorException:2048] exception 'yii\base\ErrorException' with message 'Declaration of app\models\User::beforeSave() should be compatible with yii\db\BaseActiveRecord::beforeSave($insert)' in /var/www/html/surveyApp--english/basic/models/User.php:33
+Stack trace:
+#0 /var/www/html/surveyApp--english/basic/models/User.php(33): yii\base\ErrorHandler->handleError(2048, 'Declaration of ...', '/var/www/html/s...', 33, Array)
+#1 /var/www/html/surveyApp--english/basic/vendor/yiisoft/yii2/BaseYii.php(288): include('/var/www/html/s...')
+#2 [internal function]: yii\BaseYii::autoload('app\\models\\\\\\Uee)
+#3 /var/www/html/surveyApp--english/basic/controllers/UserController.php(115): spl_autoload_call('app\\models\\\\\\Uee)
+#4 [internal function]: app\controllers\UserController->actionLogin()
+#5 /var/www/html/surveyApp--english/basic/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#6 /var/www/html/surveyApp--english/basic/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#7 /var/www/html/surveyApp--english/basic/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('login', Array)
+#8 /var/www/html/surveyApp--english/basic/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/login', Array)
+#9 /var/www/html/surveyApp--english/basic/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/html/surveyApp--english/basic/web/index.php(13): yii\base\Application->run()
+#11 {main}
+2015-08-10 17:09:34 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'user/login'
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.407138168.1423580788'
+    '_csrf' => 'af0cd2c554bd5bd517e71005732348fdb7074267c12303d8da08e87d94dbc998a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UlCgiTpkCeGlZgerFrqwlouimICg1AxL\";}'
+    'PHPSESSID' => '8crmce17n8n5mprmlgqim0e926'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/43.0.2357.130 Chrome/43.0.2357.130 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/surveyApp--english/basic/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_ga=GA1.1.407138168.1423580788; _csrf=af0cd2c554bd5bd517e71005732348fdb7074267c12303d8da08e87d94dbc998a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UlCgiTpkCeGlZgerFrqwlouimICg1AxL%22%3B%7D; PHPSESSID=8crmce17n8n5mprmlgqim0e926'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/surveyApp--english/basic/web/index.php'
+    'REMOTE_PORT' => '51550'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user%2Flogin'
+    'REQUEST_URI' => '/surveyApp--english/basic/web/index.php?r=user%2Flogin'
+    'SCRIPT_NAME' => '/surveyApp--english/basic/web/index.php'
+    'PHP_SELF' => '/surveyApp--english/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1439219374.868
+    'REQUEST_TIME' => 1439219374
+]

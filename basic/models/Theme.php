@@ -9,6 +9,8 @@ use Yii;
  *
  * @property integer $id
  * @property string $title
+ *
+ * @property Survey[] $surveys
  */
 class Theme extends \yii\db\ActiveRecord
 {
@@ -40,5 +42,13 @@ class Theme extends \yii\db\ActiveRecord
             'id' => 'ID',
             'title' => 'Title',
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getSurveys()
+    {
+        return $this->hasMany(Survey::className(), ['theme_id' => 'id']);
     }
 }

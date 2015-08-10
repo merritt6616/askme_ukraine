@@ -79,6 +79,7 @@ class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
             'user_username' => 'Username',
             'user_password' => 'Password',
             'user_isMaster' => 'Are you a survey creator?',
+            'user_isAdmin' => '',
 
         ];
     }

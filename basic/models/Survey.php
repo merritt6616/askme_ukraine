@@ -78,6 +78,11 @@ class Survey extends \yii\db\ActiveRecord
         return $this->hasOne(User::className(), ['Id' => 'user_id']);
     }
 
+    public function getSurvey()
+    {
+        return $this->hasOne(Theme::className(), ['id' => 'theme_id']);
+    }
+
     /**
      * @return \yii\db\ActiveQuery
      */
