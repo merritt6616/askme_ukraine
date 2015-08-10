@@ -93,7 +93,7 @@ use yii\web\Session;
                                if (!Yii::$app->user->isGuest && Yii::$app->user->identity->user_isMaster == 1 && ($data->user->id == Yii::$app->user->identity->id)) {
                                    echo '<div class="col-md-12">'.
                                         '<div class="row">'.
-                                        '<strong class="col-xs-12 glyphicon glyphicon-wrench iconbefore--smallspace--right">Admin Tools</strong>';
+                                        '<strong class="col-xs-12 glyphicon glyphicon-wrench iconbefore--smallspace--right">Survey Master Tools</strong>';
                                            if ($data->survey_activated == 1) {
                                                echo '<div class="col-xs-6 ">'.
                                                         'Activated'.

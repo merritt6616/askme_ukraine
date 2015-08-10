@@ -60,6 +60,18 @@ AppAsset::register($this);
                         ?>
                         </li>
                         <li>
+                            <?=
+                            !Yii::$app->user->isGuest && Yii::$app->user->identity->user_isAdmin == 1?
+                                Html::a('Manage Survey Themes', ['/theme/index']):''
+                            ?>
+                        </li>
+                        <li>
+                            <?=
+                            !Yii::$app->user->isGuest && Yii::$app->user->identity->user_isAdmin == 1?
+                                Html::a('Manage Admin Account', ['/user/update', 'id'=>Yii::$app->user->identity->id] ):''
+                            ?>
+                        </li>
+                        <li>
 
                         <?=
                         Yii::$app->user->isGuest ?

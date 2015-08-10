@@ -10,7 +10,7 @@ $this->title = 'AskMe';
 
         <?php  if (Yii::$app->user->isGuest  ) :  ?>
             <h1 class="headline--gigantic">Welcome to AskMe!</h1>
-            <p >The first hidden service for rapidly mass capturing opinions.</p>
+            <p >The first Open Source service for rapidly mass capturing opinions.</p>
             <?= Html::a('Login', ['user/login'], ['class' => 'btn']) ?>
         <?php endif;?>
 
