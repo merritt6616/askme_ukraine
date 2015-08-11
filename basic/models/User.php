@@ -219,7 +219,7 @@ class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
     }
 
 
-    public function beforeSave (){
+    public function beforeSave ($insert){
 
         if (isset($this->user_password)){
                 $this->user_password = Yii::$app->getSecurity()->generatePasswordHash($this->user_password);
