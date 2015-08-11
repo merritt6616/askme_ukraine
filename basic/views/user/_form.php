@@ -17,10 +17,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'user_password')->passwordInput(['maxlength' => true]) ?>
 
-    <?php
-        if (!Yii::$app->user->identity->user_isAdmin)
-            $form->field($model, 'user_isMaster')->checkbox(['uncheck'=>0]);
-    ?>
+    <?= $form->field($model, 'user_isMaster')->checkbox(['uncheck'=>0]); ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn--responsive--block' : 'btn btn--responsive--block']) ?>
